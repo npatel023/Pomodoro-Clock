@@ -19,6 +19,7 @@ class App extends React.Component {
     this.onSessionIntervalChange = this.onSessionIntervalChange.bind(this);
     this.onTimerMinuteChange = this.onTimerMinuteChange.bind(this);
     this.onPlayChange = this.onPlayChange.bind(this);
+    this.onResetTimer = this.onResetTimer.bind(this);
   }
 
   onPlayChange(isPlay) {
@@ -46,6 +47,14 @@ class App extends React.Component {
     })
   }
 
+  onResetTimer() {
+    this.setState({
+      sessionInterval: 25,
+      timerMinute: 25,
+      breakInterval: 5
+    })
+  }
+
   render() {
     return (
       <main className="App">
@@ -68,6 +77,7 @@ class App extends React.Component {
           onTimerMinuteChange = {this.onTimerMinuteChange}
           breakInterval = {this.state.breakInterval}
           onPlayChange = {this.onPlayChange}
+          resetTimer = {this.onResetTimer}
           />
         </section>
       </main>

@@ -76,8 +76,9 @@ class Timer extends React.Component {
   resetTimer() {
     clearInterval(this.state.intervalId);
 
-    this.props.onTimerMinuteChange(this.props.sessionInterval);
+    this.props.resetTimer();
     this.props.onPlayChange(false);
+
     this.setState({
       timerSeconds: 0
     })
