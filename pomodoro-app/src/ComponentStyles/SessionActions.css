@@ -1,0 +1,16 @@
+#actions-container {
+  display: flex;
+  justify-content: center;
+}
+
+#actions-container button {
+    background-color: #263646;
+    color: #ccc;
+    margin: 0 10px;
+    padding: 7px 15px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
